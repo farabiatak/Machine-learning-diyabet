@@ -69,11 +69,11 @@ fiziksel =  st.sidebar.number_input ('Fiziksel Durum (30 Gün) (1 - 30) - Yukar�
 
 
 
-
+# with open('customer_satisfaction/model.pkl', 'rb') as handle:
 from joblib import load
 
-logreg_model = load('C:/Users/petro/Desktop/DİYABET/logreg_model.pkl')
-
+#logreg_model = load('C:/Users/petro/Desktop/DİYABET/logreg_model.pkl')
+with open('deneme-2-st/logreg_model.pkl') as logreg_model :
 
 input_df = pd.DataFrame({ 
     
