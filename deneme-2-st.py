@@ -2,8 +2,8 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 
-from PIL import Image
-image = Image.open("C:/Users/petro/Desktop/proje4/pngegg.png")
+#from PIL import Image
+#image = Image.open("C:/Users/petro/Desktop/proje4/pngegg.png")
 
 st.set_page_config(
     page_title="DİYABET TAHMİNCİSİ",
@@ -32,6 +32,7 @@ st.markdown('Ruhsal : 30 gün içerisinde ruhsal olarak kaç kere kendinizi köt
 st.markdown('Fiziksel : 30 gün içerisinde fiziksel olarak kaç kere kendinizi kötü hissettiniz?')
 
 df = pd.read_csv("C:/Users/petro/Desktop/DİYABET/diyabet_veri_tr_2.csv")
+
 del df[df.columns[0]]
 del df[df.columns[0]]
 st.table(df.sample(5, random_state=13))
