@@ -2,12 +2,12 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 
-from PIL import Image
-image = Image.open("C:/Users/petro/Desktop/proje4/pngegg.png")
+#from PIL import Image
+#image = Image.open("C:/Users/petro/Desktop/proje4/pngegg.png")
 
 st.set_page_config(
     page_title="DİYABET TAHMİNCİSİ",
-    page_icon=image,
+    #page_icon=image,
     menu_items={
         "Get help": "mailto:mustafaatak3435@gmail.com",
         "About": "For More Information\n" + "https://github.com/farabiatak"
