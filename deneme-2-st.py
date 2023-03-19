@@ -7,7 +7,7 @@ import pandas as pd
 
 st.set_page_config(
     page_title="DİYABET TAHMİNCİSİ",
-    page_icon=image,
+    #page_icon=image,
     menu_items={
         "Get help": "mailto:mustafaatak3435@gmail.com",
         "About": "For More Information\n" + "https://github.com/farabiatak"
