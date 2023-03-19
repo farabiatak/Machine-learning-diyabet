@@ -31,13 +31,9 @@ st.markdown('Gelir : 5 - 19001 - 22000 , 6 - 22001 - 25000 , 7 - 25001 - 28000 ,
 st.markdown('Ruhsal : 30 gün içerisinde ruhsal olarak kaç kere kendinizi kötü hissettiniz?')
 st.markdown('Fiziksel : 30 gün içerisinde fiziksel olarak kaç kere kendinizi kötü hissettiniz?')
 
-#df = pd.read_csv("C:/Users/petro/Desktop/DİYABET/diyabet_veri_tr_2.csv")
+df = pd.read_csv("C:/Users/petro/Desktop/DİYABET/diyabet_veri_tr_2.csv")
 
-st.file_uploader("diyabet_veri_sample", type=["csv"])
-
-#del file[file.columns[0]]
-#del [df.columns[0]]
-#st.table(file.sample(5, random_state=13))
+st.table(df.sample(5, random_state=13))
 
 st.sidebar.markdown('Bilgilerinizi giriniz')
 
@@ -68,15 +64,11 @@ ruhsal = st.sidebar.number_input ('Ruhsal (30 Gün) (1 - 30) - Yukarıdan Ruhsal
 fiziksel =  st.sidebar.number_input ('Fiziksel Durum (30 Gün) (1 - 30) - Yukarıdan Fiziksel Skorunuzu Görebilirsiniz')
 
 
-
-# with open('customer_satisfaction/model.pkl', 'rb') as handle:
 from joblib import load
 
-#logreg_model = load('C:/Users/petro/Desktop/DİYABET/logreg_model.pkl')
-with open('deneme-2-st/logreg_model.pkl') as logreg_model :
+logreg_model = load('C:/Users/petro/Desktop/DİYABET/logreg_model.pkl')
 
-input_df = pd.DataFrame({ 
-    
+input_df = pd.DataFrame({   
     'hipertans': [htans],
     'kolestrol' : [kolestrol_kronik],
     'kolestrol_check': [kolestrol_teshis],
@@ -97,8 +89,7 @@ input_df = pd.DataFrame({
     'cinsiyet' : [cins],
     'yas' : [yas],
     'egitim': [egitim],
-    'gelir' : [gelir]
-    
+    'gelir' : [gelir]    
 })
 
 pred = logreg_model.predict(input_df.values)
