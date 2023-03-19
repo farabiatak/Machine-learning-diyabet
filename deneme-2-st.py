@@ -31,6 +31,8 @@ st.markdown('Gelir : 5 - 19001 - 22000 , 6 - 22001 - 25000 , 7 - 25001 - 28000 ,
 st.markdown('Ruhsal : 30 gün içerisinde ruhsal olarak kaç kere kendinizi kötü hissettiniz?')
 st.markdown('Fiziksel : 30 gün içerisinde fiziksel olarak kaç kere kendinizi kötü hissettiniz?')
 
+with open('customer_satisfaction/model.pkl', 'rb') as :
+
 #df = pd.read_csv("C:/Users/petro/Desktop/DİYABET/diyabet_veri_tr_2.csv")
 
 #del df[df.columns[0]]
@@ -70,7 +72,9 @@ fiziksel =  st.sidebar.number_input ('Fiziksel Durum (30 Gün) (1 - 30) - Yukar�
 
 from joblib import load
 
-logreg_model = load('C:/Users/petro/Desktop/DİYABET/logreg_model_2.pkl')
+#logreg_model = load('C:/Users/petro/Desktop/DİYABET/logreg_model_2.pkl')
+
+with open('Machine-learning-diyabet/logreg_model_2.pkl', 'rb') as logreg_model :
 
 
 input_df = pd.DataFrame({ 
