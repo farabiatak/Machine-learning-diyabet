@@ -33,9 +33,11 @@ st.markdown('Fiziksel : 30 gün içerisinde fiziksel olarak kaç kere kendinizi 
 
 df = pd.read_csv("C:/Users/petro/Desktop/DİYABET/diyabet_veri_tr_2.csv")
 
-del df[df.columns[0]]
-del df[df.columns[0]]
-st.table(df.sample(5, random_state=13))
+file = st.file_uploader("diyabet_veri_tr_2", type=["csv"])
+
+#del file[file.columns[0]]
+#del [df.columns[0]]
+st.table(file.sample(5, random_state=13))
 
 st.sidebar.markdown('Bilgilerinizi giriniz')
 
