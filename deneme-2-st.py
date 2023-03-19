@@ -31,10 +31,11 @@ st.markdown('Gelir : 5 - 19001 - 22000 , 6 - 22001 - 25000 , 7 - 25001 - 28000 ,
 st.markdown('Ruhsal : 30 gün içerisinde ruhsal olarak kaç kere kendinizi kötü hissettiniz?')
 st.markdown('Fiziksel : 30 gün içerisinde fiziksel olarak kaç kere kendinizi kötü hissettiniz?')
 
-df = pd.read_csv("C:/Users/petro/Desktop/DİYABET/diyabet_veri_tr_2.csv")
-del df[df.columns[0]]
-del df[df.columns[0]]
-st.table(df.sample(5, random_state=13))
+#df = pd.read_csv("C:/Users/petro/Desktop/DİYABET/diyabet_veri_tr_2.csv")
+
+#del df[df.columns[0]]
+#del df[df.columns[0]]
+#st.table(df.sample(5, random_state=13))
 
 st.sidebar.markdown('Bilgilerinizi giriniz')
 
