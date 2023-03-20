@@ -66,8 +66,8 @@ fiziksel =  st.sidebar.number_input ('Fiziksel Durum (30 Gün) (1 - 30) - Yukar�
 
 from joblib import load
 
-logreg_model = load('C:/Users/petro/Desktop/DİYABET/logreg_model.pkl')
-
+#logreg_model = load('C:/Users/petro/Desktop/DİYABET/logreg_model.pkl')
+with open(logreg_model, 'rb') as logreg_model:
 input_df = pd.DataFrame({   
     'hipertans': [htans],
     'kolestrol' : [kolestrol_kronik],
