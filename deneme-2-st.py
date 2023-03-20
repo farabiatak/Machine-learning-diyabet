@@ -64,10 +64,7 @@ ruhsal = st.sidebar.number_input ('Ruhsal (30 Gün) (1 - 30) - Yukarıdan Ruhsal
 fiziksel =  st.sidebar.number_input ('Fiziksel Durum (30 Gün) (1 - 30) - Yukarıdan Fiziksel Skorunuzu Görebilirsiniz')
 
 
-from joblib import load
 
-#logreg_model = load('C:/Users/petro/Desktop/DİYABET/logreg_model.pkl')
-with open(logreg_model, 'rb') as logreg_model:
 input_df = pd.DataFrame({   
     'hipertans': [htans],
     'kolestrol' : [kolestrol_kronik],
@@ -91,6 +88,12 @@ input_df = pd.DataFrame({
     'egitim': [egitim],
     'gelir' : [gelir]    
 })
+
+from joblib import load
+
+#logreg_model = load('C:/Users/petro/Desktop/DİYABET/logreg_model.pkl')
+with open(logreg_model, 'rb') as logreg_model:
+
 
 pred = logreg_model.predict(input_df.values)
 pred_prob = np.ravel(logreg_model.predict_proba(input_df))
