@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 
 from PIL import Image
-image = Image.open("C:/Users/petro/Desktop/proje4/pngegg.png")
+image = Image.open("pngegg.png")
 
 st.set_page_config(
     page_title="DİYABET TAHMİNCİSİ",
@@ -31,7 +31,7 @@ st.markdown('Gelir : 5 - 19001 - 22000 , 6 - 22001 - 25000 , 7 - 25001 - 28000 ,
 st.markdown('                                                                                       ')
 st.markdown('                                                                                       ')
 
-df = pd.read_csv("C:/Users/petro/Desktop/DİYABET/diyabet_veri_tr_2.csv")
+df = pd.read_csv("diyabet_veri_tr_2.csv")
 del df[df.columns[0]]
 del df[df.columns[0]]
 st.table(df.sample(5, random_state=13))
@@ -164,7 +164,7 @@ fiziksel =  st.sidebar.selectbox ('Fiziksel olarak kendinizi son 1 ay içinde ka
 
 from joblib import load
 
-logreg_model = load('C:/Users/petro/Desktop/DİYABET/logreg_model.pkl')
+logreg_model = load('logreg_model.pkl')
 
 
 input_df = pd.DataFrame({ 
